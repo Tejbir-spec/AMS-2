@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #0a2351; /* Dark Blue */
+  --color-accent: #d32f2f; /* Red */
+  --color-neutral-light: #f5f5f5; /* White/Light Gray */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
