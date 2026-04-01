@@ -23,7 +23,7 @@ export default function Gallery() {
       category: "Climate"
     },
     {
-      url: "caerma.png",
+      url: "camera.png",
       title: "24/7 Surveillance Cameras",
       category: "Security"
     },
