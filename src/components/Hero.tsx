@@ -97,12 +97,6 @@ export default function Hero({ onManageStorage }: HeroProps) {
             >
               View All Units <ChevronRight size={20} />
             </a>
-            <button
-              onClick={onManageStorage}
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-sm font-bold text-lg flex items-center justify-center gap-2 transition-all active:scale-95"
-            >
-              Manage Storage
-            </button>
           </div>
 
           {/* Trust Badges */}
