@@ -13,22 +13,22 @@ export default function Gallery() {
       category: "Facility"
     },
     {
-      url: "https://picsum.photos/seed/storage3/800/600",
-      title: "Spacious Car Parking",
+      url: "tarp.png",
+      title: "Car Parking",
       category: "Outdoor"
     },
     {
-      url: "https://picsum.photos/seed/storage4/800/600",
+      url: "climate.png",
       title: "Climate Controlled Units",
       category: "Climate"
     },
     {
-      url: "https://picsum.photos/seed/storage5/800/600",
+      url: "caerma.png",
       title: "24/7 Surveillance Cameras",
       category: "Security"
     },
     {
-      url: "https://picsum.photos/seed/storage6/800/600",
+      url: "drive.png",
       title: "Easy Drive-Up Access",
       category: "Convenience"
     }
