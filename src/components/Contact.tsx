@@ -79,9 +79,6 @@ export default function Contact() {
                   <Facebook size={20} />
                 </a>
                 <a href="#" className="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-sm hover:bg-accent transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href="#" className="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-sm hover:bg-accent transition-colors">
                   <Instagram size={20} />
                 </a>
               </div>
