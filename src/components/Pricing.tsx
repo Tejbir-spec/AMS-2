@@ -116,7 +116,7 @@ export default function Pricing() {
                     : "bg-primary hover:bg-blue-900 text-white"
                 }`}
               >
-                Reserve Now
+                Contact us now
               </button>
               <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
                 <Info size={12} />
@@ -133,8 +133,7 @@ export default function Pricing() {
               <Info className="text-accent" />
             </div>
             <p className="text-gray-600 max-w-xl">
-              <span className="font-bold text-primary">Not sure what size you need?</span> Use our 
-              storage calculator or call our on-site manager for a free consultation. 
+              <span className="font-bold text-primary">Not sure what size you need?</span> Call our on-site manager for a free consultation. 
               We'll help you find the most cost-effective solution.
             </p>
           </div>
