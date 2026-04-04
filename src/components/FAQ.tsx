@@ -20,11 +20,11 @@ export default function FAQ() {
     },
     {
       question: "What security measures do you have in place?",
-      answer: "We take security seriously. Our facility is fully fenced and gated, equipped with 24-hour video surveillance, well-lit driveways, and on-site management during office hours.",
+      answer: "We take security seriously. Our facility is fully fenced and gated, equipped with 24-hour video surveillance, and on-site management during office hours.",
     },
     {
       question: "How do I pay my rent?",
-      answer: "We take security seriously. Our facility is fully fenced and gated, equipped with 24-hour video surveillance, and on-site management during office hours.",
+      answer: "We make payments easy! You can pay over the phone, set up automatic monthly payments, or pay in person at our office during business hours." ,
     },
     {
       question: "Do you offer climate-controlled units?",
