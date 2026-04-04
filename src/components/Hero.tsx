@@ -27,17 +27,14 @@ export default function Hero({ onManageStorage }: HeroProps) {
           transition={{ duration: 0.8 }}
           className="text-white max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 px-4 py-1 rounded-full text-accent font-semibold text-sm mb-8">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-            Now Serving Jonesboro and surrounding area
-          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             American <br />
             <span className="text-accent">Mini-Storage</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed">
             Premium storage solutions for your home, business, and vehicles. 
-            Safe, simple, and secure with 24/7 access.
+            Safe, simple, and secure with 24/7 gated access.
           </p>
 
           {/* Reserve Box - Now moved below the heading */}
