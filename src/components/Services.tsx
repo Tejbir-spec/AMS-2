@@ -20,7 +20,7 @@ export default function Services() {
     {
       icon: <Truck size={40} className="text-accent" />,
       title: "Car and Boat Storage",
-      description: "Spacious outdoor and covered options for cars, trucks, trailers, and boats",
+      description: "Spacious outdoor and covered options for cars, trucks, trailers, and boats.",
       features: ["Wide Driveways", "Convenient Access", "Secure Perimeter"],
       image: "chatgpt-image-1.png",
     },
