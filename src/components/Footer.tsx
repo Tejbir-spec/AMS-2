@@ -60,7 +60,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-8 leading-relaxed">
               Providing secure, affordable, and convenient storage solutions 
               for the Jonesboro community.
-              <br>
+              <br />
               Your space, your way.
             </p>
             <div className="flex gap-4">
