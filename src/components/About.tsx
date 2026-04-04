@@ -93,7 +93,7 @@ export default function About() {
               <span className="text-accent">Arkansas Mini-Storage</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Established as a cornerstone of the local community, American Storage
+              Established as a cornerstone of the local community, American Mini Storage
               provides reliable, high-quality storage solutions at 5173 AR 1 Jonesboro, Arkansas.
               We understand that your belongings are more than just items—they're
               memories, business assets, and personal treasures.
