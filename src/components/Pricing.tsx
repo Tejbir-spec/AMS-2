@@ -54,10 +54,22 @@ export default function Pricing() {
               Special Discount: First Responders, Teachers, & Clergy get 10% OFF monthly rates!
             </p>
           </div>
-          <p className="text-lg text-gray-600">
-            Choose from a variety of unit sizes to fit your needs and budget. 
-            All units are clean, secure, and ready for move-in.
-          </p>
+          <p className="text-lg text-gray-600 mb-6">
+  Choose from a variety of unit sizes to fit your needs and budget. 
+  All units are clean, secure, and ready for move-in.
+</p>
+<div className="flex justify-center gap-4 flex-wrap">
+  <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-3 rounded-sm">
+    <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
+    <span className="font-bold text-blue-700">Climate Controlled</span>
+    <span className="text-blue-500 text-sm">— Consistent temp & humidity</span>
+  </div>
+  <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 px-5 py-3 rounded-sm">
+    <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+    <span className="font-bold text-gray-700">Non-Climate Controlled</span>
+    <span className="text-gray-500 text-sm">— Standard outdoor units</span>
+  </div>
+</div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
