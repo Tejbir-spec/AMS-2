@@ -4,7 +4,7 @@ export default function Gallery() {
   const images = [
     {
       url: "gated.png",
-      title: "Secure Gated Entrance",
+      title: "Easy Drive-Up Access",
       category: "Security"
     },
     {
@@ -29,7 +29,7 @@ export default function Gallery() {
     },
     {
       url: "drive.png",
-      title: "Easy Drive-Up Access",
+      title: "Secure Gated Entrance",
       category: "Convenience"
     }
   ];
