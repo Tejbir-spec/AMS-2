@@ -5,8 +5,8 @@ export default function About() {
   const values = [
     {
       icon: <Users className="text-accent" size={32} />,
-      title: "Family Owned",
-      description: "A trusted local business serving the Arkansas community for years.",
+      title: "Family Owned, and Operated",
+      description: "A trusted local business serving the Jonesboro community for years.",
     },
     {
       icon: <Handshake className="text-accent" size={32} />,
