@@ -98,12 +98,7 @@ export default function Header({ onViewChange, currentView }: HeaderProps) {
                   {link.name}
                 </a>
               ))}
-              <button
-                onClick={() => onViewChange('dashboard')}
-                className="bg-accent hover:bg-red-700 text-white px-6 py-2 rounded-sm font-semibold transition-all shadow-lg hover:shadow-xl active:scale-95"
-              >
-                Manage Storage
-              </button>
+              
             </>
           ) : (
             <button
@@ -146,15 +141,7 @@ export default function Header({ onViewChange, currentView }: HeaderProps) {
                       {link.name}
                     </a>
                   ))}
-                  <button
-                    className="bg-primary text-white text-center py-3 rounded-sm font-semibold mt-2"
-                    onClick={() => {
-                      onViewChange('dashboard');
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Manage Storage
-                  </button>
+                  
                 </>
               ) : (
                 <button
