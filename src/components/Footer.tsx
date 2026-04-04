@@ -19,7 +19,6 @@ export default function Footer() {
       links: [
         { name: "Personal Storage", href: "#services" },
         { name: "Business Storage", href: "#services" },
-        { name: "Vehicle Storage", href: "#services" },
         { name: "Car & Boat Storage", href: "#services" },
         { name: "Climate Controlled", href: "#services" },
       ],
@@ -28,9 +27,6 @@ export default function Footer() {
       title: "Customer Support",
       links: [
         { name: "FAQs", href: "#faq" },
-        { name: "Online Payments", href: "#contact" },
-        { name: "Privacy Policy", href: "#" },
-        { name: "Terms of Service", href: "#" },
       ],
     },
   ];
@@ -63,14 +59,13 @@ export default function Footer() {
             </a>
             <p className="text-gray-400 mb-8 leading-relaxed">
               Providing secure, affordable, and convenient storage solutions 
-              for the Arkansas community. Your space, your way.
+              for the Jonesboro community.
+              <br>
+              Your space, your way.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-white/5 text-white flex items-center justify-center rounded-sm hover:bg-accent transition-colors">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/5 text-white flex items-center justify-center rounded-sm hover:bg-accent transition-colors">
-                <Twitter size={20} />
               </a>
               <a href="#" className="w-10 h-10 bg-white/5 text-white flex items-center justify-center rounded-sm hover:bg-accent transition-colors">
                 <Instagram size={20} />
