@@ -50,7 +50,7 @@ export default function Contact() {
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
               Our friendly on-site management is ready to assist you with any 
               questions about our units, pricing, or security features. 
-              Reach out to us today!
+              Reach out to us to schedule an appointment today!
             </p>
 
             <div className="grid sm:grid-cols-2 gap-8 mb-12">
