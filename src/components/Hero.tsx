@@ -66,11 +66,14 @@ export default function Hero({ onManageStorage }: HeroProps) {
                     <option>Car / Boat Storage</option>
                   </select>
                 </div>
-                <div className="flex items-end">
-                  <button className="w-full md:w-auto bg-primary hover:bg-blue-900 text-white px-8 py-3.5 rounded-sm font-bold transition-all shadow-lg whitespace-nowrap">
-                    Check Availability
-                  </button>
-                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#pricing"
+              className="bg-accent hover:bg-red-700 text-white px-8 py-4 rounded-sm font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-2xl active:scale-95"
+            >
+              View All Units <ChevronRight size={20} />
+            </a>
+          </div>
               </form>
               
               <div className="mt-4 flex items-center gap-4 text-xs text-gray-400 font-medium">
@@ -85,15 +88,6 @@ export default function Hero({ onManageStorage }: HeroProps) {
               <span className="bg-accent text-white text-[10px] px-2 py-0.5 rounded-full uppercase font-black">Special Offer</span>
               10% OFF for First Responders, Teachers, & Clergy
             </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#pricing"
-              className="bg-accent hover:bg-red-700 text-white px-8 py-4 rounded-sm font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-2xl active:scale-95"
-            >
-              View All Units <ChevronRight size={20} />
-            </a>
           </div>
 
           {/* Trust Badges */}
