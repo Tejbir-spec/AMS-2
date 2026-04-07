@@ -15,8 +15,8 @@ export default function Features() {
     },
     {
       icon: <CreditCard size={32} className="text-white" />,
-      title: "Easy Online Payments",
-      description: "Manage your account and pay your rent from the comfort of your home.",
+      title: "Convenient Payment Options",
+      description: "Set up automatic payment, pay over the phone, or pay in person during business hours.",
     },
     {
       icon: <UserCheck size={32} className="text-white" />,
@@ -100,8 +100,8 @@ export default function Features() {
           <div className="max-w-xl text-center md:text-left">
             <h3 className="text-3xl font-bold mb-4">Ready to get started?</h3>
             <p className="text-gray-300 mb-4">
-              Reserve your unit online today and get your first month at a special rate. 
-              No credit card required for reservation!
+              Reserve your unit over the phone today and receive your first month at a special rate! 
+              No credit card required to secure your unit!
             </p>
             <div className="inline-flex items-center gap-2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               10% OFF for First Responders, Teachers, & Clergy
