@@ -59,18 +59,40 @@ export default function Header({ onViewChange, currentView }: HeaderProps) {
         <a href="#home" className="flex items-center gap-2 group">
           <div className="w-14 h-10 relative bg-primary flex items-center justify-center rounded-sm transform group-hover:rotate-3 transition-transform overflow-hidden shadow-md">
             {/* American Flag Background */}
-            <div className="absolute inset-0 flex flex-col">
-              {[...Array(7)].map((_, i) => (
-                <div key={i} className={`flex-1 ${i % 2 === 0 ? 'bg-[#B22234]' : 'bg-white'}`}></div>
-              ))}
-            </div>
-            <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-[#3C3B6E] flex items-center justify-center">
-              <div className="grid grid-cols-3 gap-0.5">
-                {[...Array(6)].map((_, i) => (
-                  <div key={i} className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                ))}
-              </div>
-            </div>
+            <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
+    </div>
+  </div>
+
+  <span class="relative z-10 text-yellow-400 font-black text-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">AMS</span>
+</div>
             {/* Logo Text */}
             <span className="relative z-10 text-yellow-400 font-black text-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">AMS</span>
           </div>
