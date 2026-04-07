@@ -31,7 +31,7 @@ export default function About() {
           className="mb-16"
         >
           <img
-            src="storefront.png"
+            src="front.png"
             alt="American Mini-Storage Facility Entrance"
             className="rounded-sm shadow-2xl w-full h-[550px] object-cover"
             referrerPolicy="no-referrer"
