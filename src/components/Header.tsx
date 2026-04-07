@@ -57,54 +57,17 @@ export default function Header({ onViewChange, currentView }: HeaderProps) {
       <nav className="container-custom flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-14 h-10 relative bg-primary flex items-center justify-center rounded-sm transform group-hover:rotate-3 transition-transform overflow-hidden shadow-md">
-            {/* American Flag Background */}
-            <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-      <div class="w-0.5 h-0.5 bg-white rounded-full"></div>
-    </div>
+          <a href="#home" className="flex items-center gap-2 group">
+  <img src="logo.png" alt="AMS Logo" className="w-14 h-10 object-contain" />
+  <div className="flex flex-col">
+    <span className={`font-bold text-xl leading-none ${isScrolled ? "text-primary" : "text-primary md:text-white"}`}>
+      AMERICAN
+    </span>
+    <span className={`font-semibold text-sm tracking-widest ${isScrolled ? "text-accent" : "text-accent md:text-red-200"}`}>
+      MINI-STORAGE
+    </span>
   </div>
-
-  <span class="relative z-10 text-yellow-400 font-black text-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">AMS</span>
-</div>
-            {/* Logo Text */}
-            <span className="relative z-10 text-yellow-400 font-black text-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">AMS</span>
-          </div>
-          <div className="flex flex-col">
-            <span className={`font-bold text-xl leading-none ${isScrolled ? "text-primary" : "text-primary md:text-white"}`}>
-              AMERICAN
-            </span>
-            <span className={`font-semibold text-sm tracking-widest ${isScrolled ? "text-accent" : "text-accent md:text-red-200"}`}>
-              MINI-STORAGE
-            </span>
-          </div>
-        </a>
+</a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
