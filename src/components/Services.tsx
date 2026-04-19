@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Home, Briefcase, Truck, Ship, Car, Box } from "lucide-react";
+import { Home, Briefcase, Truck, Box, CreditCard, Phone, Clock } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -90,6 +90,58 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
+
+        {/* Convenient Payment Options */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 bg-white rounded-sm shadow-lg p-8"
+        >
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="p-3 bg-accent/10 rounded-sm shrink-0">
+              <CreditCard size={36} className="text-accent" />
+            </div>
+            <div className="flex-grow">
+              <h3 className="text-xl font-bold text-primary mb-3">Convenient Payment Options</h3>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                  <Clock size={16} className="text-accent shrink-0" />
+                  Set up automatic payment
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                  <Phone size={16} className="text-accent shrink-0" />
+                  Pay over the phone
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                  <Box size={16} className="text-accent shrink-0" />
+                  Pay in person during business hours
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Ready to Get Started CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 bg-primary rounded-sm p-10 text-center"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Reserve Your Unit Over the Phone Today!
+          </h3>
+          <p className="text-white/80 text-lg mb-6 max-w-xl mx-auto">
+            Receive your first month at a special rate! No credit card required to secure your unit.
+          </p>
+          <a
+            href="tel:8702751643"
+            className="inline-block bg-accent hover:bg-red-700 text-white px-10 py-4 rounded-sm font-bold text-lg transition-all shadow-lg hover:shadow-xl active:scale-95"
+          >
+            Call (870) 275-1643
+          </a>
+        </motion.div>
       </div>
     </section>
   );
