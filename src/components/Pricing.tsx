@@ -3,70 +3,142 @@ import { Check, Info } from "lucide-react";
 
 export default function Pricing() {
   const units = [
-  {
-    size: "5' x 10'",
-    type: "Climate Controlled",
-    price: "55",
-    description: "Fits a walk-in closet or small bedroom.",
-    idealFor: ["Boxes", "Small Furniture", "Seasonal Items"],
-    isPopular: false,
-    climate: true,
-  },
-  {
-    size: "10' x 10'",
-    type: "Climate Controlled",
-    price: "85",
-    description: "Fits a 1-2 bedroom apartment or office.",
-    idealFor: ["Appliances", "Furniture", "Business Inventory"],
-    isPopular: true,
-    climate: true,
-  },
-  {
-    size: "10' x 20'",
-    type: "Climate Controlled",
-    price: "110",
-    description: "Fits a 3-4 bedroom house.",
-    idealFor: ["Full House Contents", "Large Equipment", "Family Keepsakes"],
-    isPopular: false,
-    climate: true,
-  },
-  {
-    size: "5' x 10'",
-    type: "Non-Climate Controlled",
-    price: "45",
-    description: "Fits a walk-in closet or small bedroom.",
-    idealFor: ["Boxes", "Small Furniture", "Seasonal Items"],
-    isPopular: false,
-    climate: false,
-  },
-  {
-    size: "10' x 10'",
-    type: "Non-Climate Controlled",
-    price: "69",
-    description: "Fits a 1-2 bedroom apartment or office.",
-    idealFor: ["Appliances", "Furniture", "Business Inventory"],
-    isPopular: false,
-    climate: false,
-  },
-  {
-    size: "10' x 20'",
-    type: "Non-Climate Controlled",
-    price: "88",
-    description: "Fits a 3-4 bedroom house or large vehicle.",
-    idealFor: ["Full House Content", "Car Storage", "Large Equipment"],
-    isPopular: false,
-    climate: false,
-  },
-  {
-    size: "10' x 30'",
-    type: "Non-Climate Controlled",
-    price: "125",
-    description: "Spacious outdoor or covered storage.",
-    idealFor: ["Cars", "Boats", "Trailers"],
-    isPopular: false,
-    climate: false,
-  },
-];
+    {
+      size: "5' x 10'",
+      type: "Climate Controlled",
+      price: "55",
+      description: "Fits a walk-in closet or small bedroom.",
+      idealFor: ["Boxes", "Small Furniture", "Seasonal Items"],
+      isPopular: false,
+      climate: true,
+      available: 4,
+    },
+    {
+      size: "7' x 14'",
+      type: "Climate Controlled",
+      price: "100",
+      description: "Great mid-size option for extra furniture or equipment.",
+      idealFor: ["Furniture", "Equipment", "Business Files"],
+      isPopular: false,
+      climate: true,
+      available: 1,
+    },
+    {
+      size: "8' x 9'",
+      type: "Climate Controlled",
+      price: "65",
+      description: "Compact climate unit ideal for sensitive items.",
+      idealFor: ["Electronics", "Documents", "Valuables"],
+      isPopular: false,
+      climate: true,
+      available: 1,
+    },
+    {
+      size: "8' x 11'",
+      type: "Climate Controlled",
+      price: "75",
+      description: "Versatile mid-size climate unit for a variety of needs.",
+      idealFor: ["Appliances", "Clothing", "Small Furniture"],
+      isPopular: false,
+      climate: true,
+      available: 1,
+    },
+    {
+      size: "10' x 10'",
+      type: "Climate Controlled",
+      price: "85",
+      description: "Fits a 1-2 bedroom apartment or office.",
+      idealFor: ["Appliances", "Furniture", "Business Inventory"],
+      isPopular: true,
+      climate: true,
+      available: 2,
+    },
+    {
+      size: "10' x 12'",
+      type: "Climate Controlled",
+      price: "100",
+      description: "Extra room for larger furniture sets or business storage.",
+      idealFor: ["Full Bedroom Set", "Business Records", "Appliances"],
+      isPopular: false,
+      climate: true,
+      available: 1,
+    },
+    {
+      size: "10' x 20'",
+      type: "Climate Controlled",
+      price: "110",
+      description: "Fits a 3-4 bedroom house.",
+      idealFor: ["Full House Contents", "Large Equipment", "Family Keepsakes"],
+      isPopular: false,
+      climate: true,
+      available: 1,
+    },
+    {
+      size: "5' x 10'",
+      type: "Non-Climate Controlled",
+      price: "45",
+      description: "Fits a walk-in closet or small bedroom.",
+      idealFor: ["Boxes", "Small Furniture", "Seasonal Items"],
+      isPopular: false,
+      climate: false,
+      available: 1,
+    },
+    {
+      size: "10' x 10'",
+      type: "Non-Climate Controlled",
+      price: "69",
+      description: "Fits a 1-2 bedroom apartment or office.",
+      idealFor: ["Appliances", "Furniture", "Business Inventory"],
+      isPopular: false,
+      climate: false,
+      available: 4,
+    },
+    {
+      size: "10' x 20'",
+      type: "Non-Climate Controlled",
+      price: "88",
+      description: "Fits a 3-4 bedroom house or large vehicle.",
+      idealFor: ["Full House Content", "Car Storage", "Large Equipment"],
+      isPopular: false,
+      climate: false,
+      available: 1,
+    },
+    {
+      size: "10' x 30'",
+      type: "Non-Climate Controlled",
+      price: "125",
+      description: "Spacious outdoor or covered storage.",
+      idealFor: ["Cars", "Boats", "Trailers"],
+      isPopular: false,
+      climate: false,
+      available: 0,
+    },
+  ];
+
+  const getAvailabilityBadge = (available: number) => {
+    if (available === 0) {
+      return (
+        <span className="inline-flex items-center gap-1 bg-gray-100 text-gray-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+          <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+          Waitlist
+        </span>
+      );
+    }
+    if (available === 1) {
+      return (
+        <span className="inline-flex items-center gap-1 bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+          Only 1 Available
+        </span>
+      );
+    }
+    return (
+      <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+        <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        {available} Available
+      </span>
+    );
+  };
 
   return (
     <section id="pricing" className="py-24 bg-white">
@@ -86,122 +158,143 @@ export default function Pricing() {
             </p>
           </div>
           <p className="text-lg text-gray-600 mb-6">
-  Choose from a variety of unit sizes to fit your needs and budget. 
-  All units are clean, secure, and ready for move-in.
-</p>
-<div className="flex justify-center gap-4 flex-wrap">
-  <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-3 rounded-sm">
-    <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
-    <span className="font-bold text-blue-700">Climate Controlled</span>
-    <span className="text-blue-500 text-sm">— Consistent temp & humidity</span>
-  </div>
-  <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 px-5 py-3 rounded-sm">
-    <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
-    <span className="font-bold text-gray-700">Non-Climate Controlled</span>
-    <span className="text-gray-500 text-sm">— Standard outdoor units</span>
-  </div>
-</div>
-        </div>
-       {/* Climate Controlled */}
-<div className="mb-16">
-  <div className="flex items-center gap-2 mb-8">
-    <span className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></span>
-    <h3 className="text-2xl font-bold text-primary">Climate Controlled</h3>
-  </div>
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {units.filter(u => u.climate).map((unit, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 }}
-        className={`relative bg-white rounded-sm border-2 p-8 flex flex-col group transition-all hover:shadow-2xl ${
-          unit.isPopular ? "border-accent shadow-xl scale-105 z-10" : "border-blue-100 hover:border-blue-300"
-        }`}
-      >
-        {unit.isPopular && (
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-            Most Popular
+            Choose from a variety of unit sizes to fit your needs and budget.
+            All units are clean, secure, and ready for move-in.
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-3 rounded-sm">
+              <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
+              <span className="font-bold text-blue-700">Climate Controlled</span>
+              <span className="text-blue-500 text-sm">— Consistent temp & humidity</span>
+            </div>
+            <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 px-5 py-3 rounded-sm">
+              <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+              <span className="font-bold text-gray-700">Non-Climate Controlled</span>
+              <span className="text-gray-500 text-sm">— Standard outdoor units</span>
+            </div>
           </div>
-        )}
-        <div className="mb-6">
-          <h3 className="text-3xl font-bold text-primary mb-1">{unit.size}</h3>
-          <p className="text-blue-500 font-semibold uppercase tracking-wider text-xs">{unit.type}</p>
         </div>
-        <div className="mb-6 flex items-baseline gap-1">
-          <span className="text-4xl font-bold text-primary">${unit.price}</span>
-          <span className="text-gray-500 font-medium">/mo</span>
-        </div>
-        <p className="text-gray-600 mb-6 text-sm leading-relaxed">{unit.description}</p>
-        <div className="space-y-3 mb-8 flex-grow">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Ideal For:</p>
-          {unit.idealFor.map((item, iIndex) => (
-            <div key={iIndex} className="flex items-center gap-2 text-sm text-gray-700">
-              <Check size={16} className="text-accent" />
-              {item}
-            </div>
-          ))}
-        </div>
-        <button className={`w-full py-4 rounded-sm font-bold transition-all active:scale-95 ${
-          unit.isPopular ? "bg-accent hover:bg-red-700 text-white shadow-lg" : "bg-primary hover:bg-blue-900 text-white"
-        }`}>
-          Contact Us Now
-        </button>
-        <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
-          <Info size={12} />
-          <span>No deposit required</span>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
 
-{/* Non-Climate Controlled */}
-<div>
-  <div className="flex items-center gap-2 mb-8">
-    <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
-    <h3 className="text-2xl font-bold text-primary">Non-Climate Controlled</h3>
-  </div>
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-    {units.filter(u => !u.climate).map((unit, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 }}
-        className="relative bg-white rounded-sm border-2 p-8 flex flex-col group transition-all hover:shadow-2xl border-gray-100 hover:border-accent/30"
-      >
-        <div className="mb-6">
-          <h3 className="text-3xl font-bold text-primary mb-1">{unit.size}</h3>
-          <p className="text-gray-500 font-semibold uppercase tracking-wider text-xs">{unit.type}</p>
+        {/* Climate Controlled */}
+        <div className="mb-16">
+          <div className="flex items-center gap-2 mb-8">
+            <span className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></span>
+            <h3 className="text-2xl font-bold text-primary">Climate Controlled</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {units.filter(u => u.climate).map((unit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`relative bg-white rounded-sm border-2 p-8 flex flex-col group transition-all hover:shadow-2xl ${
+                  unit.isPopular ? "border-accent shadow-xl scale-105 z-10" : "border-blue-100 hover:border-blue-300"
+                }`}
+              >
+                {unit.isPopular && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Most Popular
+                  </div>
+                )}
+                <div className="mb-4">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-3xl font-bold text-primary">{unit.size}</h3>
+                    {getAvailabilityBadge(unit.available)}
+                  </div>
+                  <p className="text-blue-500 font-semibold uppercase tracking-wider text-xs">{unit.type}</p>
+                </div>
+                <div className="mb-6 flex items-baseline gap-1">
+                  <span className="text-4xl font-bold text-primary">${unit.price}</span>
+                  <span className="text-gray-500 font-medium">/mo</span>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{unit.description}</p>
+                <div className="space-y-3 mb-8 flex-grow">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Ideal For:</p>
+                  {unit.idealFor.map((item, iIndex) => (
+                    <div key={iIndex} className="flex items-center gap-2 text-sm text-gray-700">
+                      <Check size={16} className="text-accent" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className={`w-full py-4 rounded-sm font-bold transition-all active:scale-95 ${
+                    unit.available === 0
+                      ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                      : unit.isPopular
+                      ? "bg-accent hover:bg-red-700 text-white shadow-lg"
+                      : "bg-primary hover:bg-blue-900 text-white"
+                  }`}
+                  disabled={unit.available === 0}
+                >
+                  {unit.available === 0 ? "Join Waitlist" : "Contact Us Now"}
+                </button>
+                <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
+                  <Info size={12} />
+                  <span>No deposit required</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <div className="mb-6 flex items-baseline gap-1">
-          <span className="text-4xl font-bold text-primary">${unit.price}</span>
-          <span className="text-gray-500 font-medium">/mo</span>
+
+        {/* Non-Climate Controlled */}
+        <div>
+          <div className="flex items-center gap-2 mb-8">
+            <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+            <h3 className="text-2xl font-bold text-primary">Non-Climate Controlled</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {units.filter(u => !u.climate).map((unit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative bg-white rounded-sm border-2 p-8 flex flex-col group transition-all hover:shadow-2xl border-gray-100 hover:border-accent/30"
+              >
+                <div className="mb-4">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-3xl font-bold text-primary">{unit.size}</h3>
+                    {getAvailabilityBadge(unit.available)}
+                  </div>
+                  <p className="text-gray-500 font-semibold uppercase tracking-wider text-xs">{unit.type}</p>
+                </div>
+                <div className="mb-6 flex items-baseline gap-1">
+                  <span className="text-4xl font-bold text-primary">${unit.price}</span>
+                  <span className="text-gray-500 font-medium">/mo</span>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{unit.description}</p>
+                <div className="space-y-3 mb-8 flex-grow">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Ideal For:</p>
+                  {unit.idealFor.map((item, iIndex) => (
+                    <div key={iIndex} className="flex items-center gap-2 text-sm text-gray-700">
+                      <Check size={16} className="text-accent" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className={`w-full py-4 rounded-sm font-bold transition-all active:scale-95 ${
+                    unit.available === 0
+                      ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                      : "bg-primary hover:bg-blue-900 text-white"
+                  }`}
+                  disabled={unit.available === 0}
+                >
+                  {unit.available === 0 ? "Join Waitlist" : "Contact Us Now"}
+                </button>
+                <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
+                  <Info size={12} />
+                  <span>No deposit required</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <p className="text-gray-600 mb-6 text-sm leading-relaxed">{unit.description}</p>
-        <div className="space-y-3 mb-8 flex-grow">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Ideal For:</p>
-          {unit.idealFor.map((item, iIndex) => (
-            <div key={iIndex} className="flex items-center gap-2 text-sm text-gray-700">
-              <Check size={16} className="text-accent" />
-              {item}
-            </div>
-          ))}
-        </div>
-        <button className="w-full py-4 rounded-sm font-bold transition-all active:scale-95 bg-primary hover:bg-blue-900 text-white">
-          Contact Us Now
-        </button>
-        <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
-          <Info size={12} />
-          <span>No deposit required</span>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
 
         {/* Pricing Note */}
         <div className="mt-16 p-8 bg-neutral-light rounded-sm border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -210,7 +303,7 @@ export default function Pricing() {
               <Info className="text-accent" />
             </div>
             <p className="text-gray-600 max-w-xl">
-              <span className="font-bold text-primary">Not sure what size you need?</span> Call our on-site manager for a free consultation. 
+              <span className="font-bold text-primary">Not sure what size you need?</span> Call our on-site manager for a free consultation.
               We'll help you find the most cost-effective solution.
             </p>
           </div>
