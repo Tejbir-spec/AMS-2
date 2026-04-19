@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Home, Briefcase, Truck, Box, CreditCard, Phone, Clock } from "lucide-react";
+import { Home, Briefcase, Truck, Box, CreditCard, Phone } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -105,10 +105,6 @@ export default function Services() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-3">Convenient Payment Options</h3>
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center gap-2 text-gray-600 text-sm">
-                  <Clock size={16} className="text-accent shrink-0" />
-                  Set up automatic payment
-                </div>
                 <div className="flex items-center gap-2 text-gray-600 text-sm">
                   <Phone size={16} className="text-accent shrink-0" />
                   Pay over the phone
