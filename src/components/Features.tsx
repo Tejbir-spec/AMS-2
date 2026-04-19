@@ -16,7 +16,7 @@ export default function Features() {
     {
       icon: <CreditCard size={32} className="text-white" />,
       title: "Convenient Payment Options",
-      description: "Set up automatic payment, pay over the phone, or pay in person during business hours.",
+      description: "Pay over the phone, or pay in person during business hours.",
     },
     {
       icon: <UserCheck size={32} className="text-white" />,
